@@ -11,7 +11,7 @@ public class SimpleTable extends HashTable {
 	public int calculateHash(String word) {
 		int hash = 0;
 		for (byte b : word.getBytes()) {
-			hash = ((hash * 31) + b) % this.tableSize;
+			hash = ((hash * multiplier) + b) % this.tableSize;
 		}
 		return hash;
 	}
